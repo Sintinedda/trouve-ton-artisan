@@ -1,0 +1,156 @@
+header,
+.nav-btn-burger,
+.nav-btn-search,
+.nav-search,
+.nav-menu{
+    background-color: #F1F8FC;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  0 16px;
+    padding: 14px 0;
+}
+
+.header-logo{
+    width: 156px;
+}
+
+.nav-items{
+    display: flex;
+}
+
+.nav-search{
+    display: none;
+}
+
+.nav-menu{
+    display: none;
+}
+
+.nav-btn-search,
+.nav-btn-burger,
+.nav-logo-search,
+.nav-menu-link{
+    color: #0074C7;
+}
+
+.nav-btn-search:hover,
+.nav-btn-burger:hover,
+.nav-logo-search:hover,
+.nav-menu-link:hover{
+    color: #00497c;
+}
+
+.show-search,
+.show-links{
+    border-top: 3px solid#0074C7;
+}
+
+.show-search,
+.show-links{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    top: 120px;
+    width: 100%;
+    left: 0;
+    padding: 20px 0;
+}
+
+.nav-search-input,
+.nav-logo-search{
+    border: 1px solid #0074C7;
+}
+
+.nav-search-input{
+    width: 240px;
+    height: 36px;
+    border-right: none;
+    background-color: #F1F8FC;
+}
+
+.nav-search-input,
+.nav-search-input::placeholder{
+    padding-left: 10px;
+}
+
+.nav-search-input::placeholder{
+    color: #0074C7;
+    font-style: italic;
+}
+
+.nav-logo-search{
+    padding: 6px;
+}
+
+.nav-menu-items{
+    width: 100%;
+}
+
+.nav-menu-item{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 0;
+}
+
+@media screen and (min-width:720px) {
+
+    .nav{
+        margin: 0 40px;
+    }
+
+    .header-logo{
+        width: 280px;
+    }
+
+    .nav-search-logo,
+    .nav-burger-logo{
+        display: none;
+    }
+    
+    .nav-search{
+        display: flex;
+    }
+
+    .nav-menu{
+        display: block;
+        position: absolute;
+        left: 40px;
+        top: 130px;
+    }
+
+    .nav-menu-items{
+        display: flex;
+    }
+
+    .nav-menu-item{
+        padding: 0 12px;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .nav{
+        margin: 0 120px;
+    }
+
+    .header-logo{
+        width: 360px;
+    }
+
+    .nav-items{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-menu{
+        position: static;
+        padding-top: 10px;
+    }
+    
+}
