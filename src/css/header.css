@@ -152,5 +152,10 @@ header,
         position: static;
         padding-top: 10px;
     }
+
+    .nav-menu-item{
+        font-size: 20px;
+        padding: 0 20px;
+    }
     
 }
