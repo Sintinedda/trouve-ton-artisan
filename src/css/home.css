@@ -4,12 +4,12 @@
 }
 
 .stage-title{
-    font-size: 14px;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
 .stage-text{
-    padding: 0 0 10px 20px;
+    padding: 10px 0 20px 20px;
 }
 
 .top{
@@ -22,13 +22,22 @@
 
 .top-title{
     color: #f1f8fc;
+    padding-bottom: 10px;
+}
+
+.top-txt{
     padding-bottom: 5px;
 }
 
 @media screen and (min-width:720px) {
+
+    .stages,
+    .tops{
+        padding: 30px 0;
+    }
     
     .stage-title{
-        font-size: 18px;
+        font-size: 1.3rem;
     }
 
     .top-container{
@@ -38,16 +47,30 @@
     }
 
     .top{
+        padding: 30px 0;
         width: 45%;
         margin: 15px;
+    }
+
+    .top-title{
+        padding-bottom: 20px;
+    }
+
+    .top-txt{
+        padding-bottom: 10px;
     }
 
 }
 
 @media screen and (min-width:1024px) {
+
+    .stages,
+    .tops{
+    padding: 40px 0;
+    }
     
     .stage-title{
-        font-size: 22px;
+        font-size: 1.6rem;
     }
 
     .top-container{
@@ -56,8 +79,17 @@
     }
 
     .top{
-        width: 30%;
+        width: 32%;
         margin: 0;
+    }
+
+    .top-title{
+        padding-bottom: 30px;
+    }
+
+    .top-txt{
+        font-size: 1.3rem;
+        padding-bottom: 15px;
     }
 
 }
