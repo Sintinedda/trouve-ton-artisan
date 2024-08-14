@@ -1,6 +1,24 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  background-color: #0074c7;
+  font-size: 12px;
+}
+
+main{
+  margin: 0 16px;
+}
+
+h1,
+h2{
+  color: #384050;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+p{
+  color: #f1f8fc;
 }
 
 ul{
@@ -19,10 +37,29 @@ button{
 
 @media screen and (min-width:720px) {
   
+  main{
+    margin: 0 40px;
+    font-size: 16px;
+  }
+
+  h1,
+  h2{
+    font-size: 24px;
+    text-align: start;
+  }
   
 }
 
 @media screen and (min-width:1024px) {
   
+  main{
+    margin: 0 120px;
+    font-size: 20px;
+  }
+
+  h1,
+  h2{
+    font-size: 30px;
+  }
   
 }

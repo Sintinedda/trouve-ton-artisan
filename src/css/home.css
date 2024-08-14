@@ -1,0 +1,63 @@
+.stages,
+.tops{
+    padding: 20px 0;
+}
+
+.stage-title{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stage-text{
+    padding: 0 0 10px 20px;
+}
+
+.top{
+    background-color: #00497c;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-radius: 5%;
+}
+
+.top-title{
+    color: #f1f8fc;
+    padding-bottom: 5px;
+}
+
+@media screen and (min-width:720px) {
+    
+    .stage-title{
+        font-size: 18px;
+    }
+
+    .top-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .top{
+        width: 45%;
+        margin: 15px;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    
+    .stage-title{
+        font-size: 22px;
+    }
+
+    .top-container{
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .top{
+        width: 30%;
+        margin: 0;
+    }
+
+}
