@@ -3,6 +3,12 @@
     padding: 20px 0;
 }
 
+.stages-container{
+    background-color: #f1f8fc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
 .stage-title{
     font-size: 1.1rem;
     font-weight: 600;
@@ -10,23 +16,6 @@
 
 .stage-text{
     padding: 10px 0 20px 20px;
-}
-
-.top{
-    background-color: #00497c;
-    text-align: center;
-    padding: 20px 0;
-    margin-bottom: 20px;
-    border-radius: 5%;
-}
-
-.top-title{
-    color: #f1f8fc;
-    padding-bottom: 10px;
-}
-
-.top-txt{
-    padding-bottom: 5px;
 }
 
 @media screen and (min-width:720px) {
@@ -40,26 +29,6 @@
         font-size: 1.3rem;
     }
 
-    .top-container{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .top{
-        padding: 30px 0;
-        width: 45%;
-        margin: 15px;
-    }
-
-    .top-title{
-        padding-bottom: 20px;
-    }
-
-    .top-txt{
-        padding-bottom: 10px;
-    }
-
 }
 
 @media screen and (min-width:1024px) {
@@ -71,25 +40,6 @@
     
     .stage-title{
         font-size: 1.6rem;
-    }
-
-    .top-container{
-        justify-content: space-between;
-        flex-wrap: nowrap;
-    }
-
-    .top{
-        width: 32%;
-        margin: 0;
-    }
-
-    .top-title{
-        padding-bottom: 30px;
-    }
-
-    .top-txt{
-        font-size: 1.3rem;
-        padding-bottom: 15px;
     }
 
 }

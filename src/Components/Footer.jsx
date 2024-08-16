@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../css/footer.css"
+import "../css/footer.css";
+import data from "../json/datas.json";
 
 function Footer() {
+
+    const newData = [...new Set(data.map(item => (item.category)))];
 
     return(
         <footer>
@@ -15,11 +18,12 @@ function Footer() {
                         <li className="legal-item"><Link to="cookies" className="legal-link">Cookies</Link></li>
                     </ul>
                     <ul className="page-items">
-                        <li className="page-item"><Link to="home" className="page-link">Acceuil</Link></li>
-                        <li className="page-item"><Link to="building" className="page-link">Bâtiment</Link></li>
-                        <li className="page-item"><Link to="service" className="page-link">Services</Link></li>
-                        <li className="page-item"><Link to="fabrication" className="page-link">Fabrication</Link></li>
-                        <li className="page-item"><Link to="feeding" className="page-link">Alimentation</Link></li>
+                        <li className="page-item"><Link to="home" className="page-link">Accueil</Link></li>
+                        {newData.map((cat) => {
+                            return(
+                                <li className="page-item"><Link to={`/:${cat}`} className="page-link">{cat}</Link></li>
+                            )
+                        })}
                     </ul>
                     <ul className="address-items">
                         <li className="address-item"><a className="footer-address-link" href="https://g.co/kgs/hFQfsG9">

@@ -1,0 +1,76 @@
+.artisan-card-container{
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f8fc;
+    margin: 0 auto 20px auto;
+    border-radius: 5%;
+}
+
+.artisan-card-container:hover{
+    border: 2px solid #00497c;
+    background-color: #f1f8fcd0;
+}
+
+.artisan-card{
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+
+.artisan-card-name{
+    color: #00497c;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #0074c7;
+}
+
+.artisan-card-txt{
+    padding-bottom: 5px;
+}
+
+@media screen and (min-width:720px) {
+
+    .artisan-cards-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .artisan-card-container{
+        padding: 30px 0;
+        width: 45%;
+        margin: 10px;
+    }
+
+    .artisan-card-name{
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .artisan-card-txt{
+        padding-bottom: 10px;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .artisan-cards-container{
+        justify-content: center;
+    }
+    
+    .artisan-card-container{
+        width: 30%;
+    }
+
+    .artisan-card-name{
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .artisan-card-txt{
+        font-size: 1.3rem;
+        padding-bottom: 15px;
+    }
+
+}
