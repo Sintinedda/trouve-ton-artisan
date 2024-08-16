@@ -11,9 +11,12 @@
 }
 
 .legal-items,
-.page-items,
-.address-items{
+.page-items{
     width: 45%;
+}
+
+.address-items{
+    width: 100%;
 }
 
 .legal-link,

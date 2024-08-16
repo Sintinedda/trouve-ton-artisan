@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../img/Logo.png"
-import "../css/header.css"
+import Logo from "../img/Logo.png";
+import "../css/header.css";
+import data from "../json/datas.json";
 
 
 function Header() {
@@ -12,7 +13,8 @@ function Header() {
     const [showLinks, setShowLinks] = useState(false);
     let menuRef = useRef();
 
-    
+    const newData = [...new Set(data.map(item => (item.category)))];
+
     useEffect(() => {
 
         let closeSearch = (e) => {
@@ -71,10 +73,11 @@ function Header() {
                         </div>
                         <div className={`nav-menu ${showLinks ? "show-links" : "hide-links"}`}>
                             <ul className="nav-menu-items">
-                                <li className="nav-menu-item"><Link to="building" className="nav-menu-link">Bâtiment</Link></li>
-                                <li className="nav-menu-item"><Link to="service" className="nav-menu-link">Services</Link></li>
-                                <li className="nav-menu-item"><Link to="fabrication" className="nav-menu-link">Fabrication</Link></li>
-                                <li className="nav-menu-item"><Link to="feeding" className="nav-menu-link">Alimentation</Link></li>
+                                {newData.map((cat) => {
+                                    return(
+                                        <li className="nav-menu-item"><Link to={`/:${cat}`} className="nav-menu-link">{cat}</Link></li>
+                                    )
+                                    })}
                             </ul>
                         </div>
                     </div>

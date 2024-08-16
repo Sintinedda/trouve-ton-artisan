@@ -11,33 +11,37 @@ function Home() {
     return(
         <main>
             <div className="stages">
-                <h1 className="title">Comment trouver mon artisan ?</h1>
-                <div className="stage">
-                    <p className="stage-title">Étape 1 :</p>
-                    <p className="stage-text">Choisir la catégorie d'artisanat dans le menu</p>
-                </div>
-                <div className="stage">
-                    <p className="stage-title">Étape 2 :</p>
-                    <p className="stage-text">Choisir un artisan</p>
-                </div>
-                <div className="stage">
-                    <p className="stage-title">Étape 3 :</p>
-                    <p className="stage-text">Contacter l'artisan via le formulaire de contact</p>
-                </div>
-                <div className="stage">
-                    <p className="stage-title">Étape 4 :</p>
-                    <p className="stage-text">Une réponse vous sera apportée sous 48 heures</p>
+                <h1 className="h1-title">Comment trouver mon artisan ?</h1>
+                <div className="stages-container">
+                    <div className="stage">
+                        <p className="stage-title">Étape 1 :</p>
+                        <p className="stage-text">Choisir la catégorie d'artisanat dans le menu</p>
+                    </div>
+                    <div className="stage">
+                        <p className="stage-title">Étape 2 :</p>
+                        <p className="stage-text">Choisir un artisan</p>
+                    </div>
+                    <div className="stage">
+                        <p className="stage-title">Étape 3 :</p>
+                        <p className="stage-text">Contacter l'artisan via le formulaire de contact</p>
+                    </div>
+                    <div className="stage">
+                        <p className="stage-title">Étape 4 :</p>
+                        <p className="stage-text">Une réponse vous sera apportée sous 48 heures</p>
                 </div>
             </div>
+            </div>
             <div className="tops">
-                <h2 className="title">Artisans du mois</h2>
-                    <div className="top-container">
+                <h2 className="h2-title">Artisans du mois</h2>
+                    <div className="artisan-cards-container">
                         {isTop.map((top) => (
-                                <div className="top">
-                                    <h3 className="top-title">{top.name}</h3>
-                                    <p className="top-txt"><strong>Note : </strong><Rating className="top-stars" initialValue={top.note} readonly allowFraction size={20} fillColor="#f1f8fc" emptyColor="#384050"/> </p>
-                                    <p className="top-txt"><strong>Spécialité : </strong>{top.specialty}</p>
-                                    <p className="top-txt"><strong>Localisation : </strong>{top.location}</p>
+                                <div className="artisan-card-container">
+                                    <div className="artisan-card">
+                                        <h3 className="artisan-card-name">{top.name}</h3>
+                                        <p className="artisan-card-txt"><strong>Note : </strong><Rating className="top-stars" initialValue={top.note} readonly allowFraction size={20} fillColor="#0074c7" emptyColor="#f1f8fc"/> </p>
+                                        <p className="artisan-card-txt"><strong>Spécialité : </strong>{top.specialty}</p>
+                                        <p className="artisan-card-txt"><strong>Localisation : </strong>{top.location}</p>
+                                    </div>
                                 </div>
                         ))}
                     </div>
