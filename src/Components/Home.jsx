@@ -2,6 +2,7 @@ import React from "react";
 import "../css/home.css";
 import data from "../json/datas.json";
 import { Rating } from "react-simple-star-rating";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -36,12 +37,14 @@ function Home() {
                     <div className="artisan-cards-container">
                         {isTop.map((top) => (
                                 <div className="artisan-card-container">
-                                    <div className="artisan-card">
-                                        <h3 className="artisan-card-name">{top.name}</h3>
-                                        <p className="artisan-card-txt"><strong>Note : </strong><Rating className="top-stars" initialValue={top.note} readonly allowFraction size={20} fillColor="#0074c7" emptyColor="#f1f8fc"/> </p>
-                                        <p className="artisan-card-txt"><strong>Spécialité : </strong>{top.specialty}</p>
-                                        <p className="artisan-card-txt"><strong>Localisation : </strong>{top.location}</p>
-                                    </div>
+                                    <Link to={`/artisan/:${top.id}`}>
+                                        <div className="artisan-card">
+                                            <h3 className="artisan-card-name">{top.name}</h3>
+                                            <p className="artisan-card-txt"><strong>Note : </strong><Rating className="top-stars" initialValue={top.note} readonly allowFraction size={20} fillColor="#0074c7" emptyColor="#f1f8fc"/> </p>
+                                            <p className="artisan-card-txt"><strong>Spécialité : </strong>{top.specialty}</p>
+                                            <p className="artisan-card-txt"><strong>Localisation : </strong>{top.location}</p>
+                                        </div>
+                                    </Link>
                                 </div>
                         ))}
                     </div>

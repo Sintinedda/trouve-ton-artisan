@@ -73,9 +73,9 @@ function Header() {
                         </div>
                         <div className={`nav-menu ${showLinks ? "show-links" : "hide-links"}`}>
                             <ul className="nav-menu-items">
-                                {newData.map((cat) => {
+                                {newData.map((cat, index) => {
                                     return(
-                                        <li className="nav-menu-item"><Link to={`/:${cat}`} className="nav-menu-link">{cat}</Link></li>
+                                        <li className="nav-menu-item" key={index}><Link to={`/category/:${cat}`} className="nav-menu-link">{cat}</Link></li>
                                     )
                                     })}
                             </ul>
