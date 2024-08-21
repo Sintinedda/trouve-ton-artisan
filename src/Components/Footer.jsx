@@ -19,9 +19,9 @@ function Footer() {
                     </ul>
                     <ul className="page-items">
                         <li className="page-item"><Link to="home" className="page-link">Accueil</Link></li>
-                        {newData.map((cat) => {
+                        {newData.map((cat, index) => {
                             return(
-                                <li className="page-item"><Link to={`/:${cat}`} className="page-link">{cat}</Link></li>
+                                <li className="page-item" key={index}><Link to={`/category/:${cat}`} className="page-link">{cat}</Link></li>
                             )
                         })}
                     </ul>

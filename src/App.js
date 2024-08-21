@@ -7,6 +7,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
 import List from './Components/List';
+import Artisan from './Components/Artisan';
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
         <Route path="/">
           <Route index element={<Navigate to="home" replace />} />
           <Route path="home" element={<Home/>} />
-          <Route path=":category" element={<List />} />
+          <Route path="category/:cat" element={<List />} />
+          <Route path="artisan/:id" element={<Artisan />} />
         </Route>
       </Routes>
       <Footer />
