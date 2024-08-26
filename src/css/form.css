@@ -1,0 +1,82 @@
+.form-inputs,
+.form-textarea-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.form-label {
+    padding-bottom: 5px;
+}
+
+.form-label,
+.form-submit-btn {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.form-input,
+.form-label,
+.form-textarea {
+    color: #0074c7;
+}
+
+.form-input,
+.form-textarea {
+    padding: 5px;
+    border: solid 1px #0074c7;
+    border-radius: 5px;
+}
+
+.form-textarea {
+    height: 100px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #82b864;
+    outline-color: #82b864;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.form-submit-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #0074c7;
+    color: #82b864;
+    cursor: pointer;
+}
+
+.form-submit-btn:hover {
+    border: 2px solid #cd2c2e;
+    background-color: #00497c;
+}
+
+@media screen and (min-width:720px) {
+    
+    .form-inputs {
+        display: block;
+    }
+
+    .form-label {
+        padding-right: 20px;
+    }
+
+    .form-label,
+    .form-submit-btn {
+        font-size: 1.3rem;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    
+    .form-label,
+    .form-submit-btn {
+        font-size: 1.6rem;
+    }  
+
+}
