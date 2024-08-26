@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../img/Logo.png";
 import "../css/header.css";
 import data from "../json/datas.json";
@@ -75,7 +75,7 @@ function Header() {
                             <ul className="nav-menu-items">
                                 {newData.map((cat, index) => {
                                     return(
-                                        <li className="nav-menu-item" key={index}><Link to={`/category/:${cat}`} className="nav-menu-link">{cat}</Link></li>
+                                        <li className="nav-menu-item" key={index}><NavLink to={`/category/:${cat}`} className="nav-menu-link">{cat}</NavLink></li>
                                     )
                                     })}
                             </ul>

@@ -36,13 +36,6 @@
     color: #0074C7;
 }
 
-.nav-btn-search:hover,
-.nav-btn-burger:hover,
-.nav-logo-search:hover,
-.nav-menu-link:hover{
-    color: #00497c;
-}
-
 .show-search,
 .show-links{
     border-top: 3px solid#0074C7;
@@ -94,6 +87,10 @@
     font-size: 1.2rem;
     font-weight: 600;
     padding: 16px 0;
+}
+
+.nav-menu-link.active {
+    color: #cd2c2e;
 }
 
 @media screen and (min-width:720px) {

@@ -1,0 +1,93 @@
+.artisan-container {
+    padding: 20px 0;
+}
+
+.artisan-info {
+    margin-bottom: 20px;
+}
+
+.artisan-info,
+.artisan-contact-form {
+    background-color: #f1f8fc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.artisan-info-item {
+    display: flex;
+    align-items: center;
+}
+
+.artisan-info-item,
+.artisan-info-about,
+.artisan-info-web {
+    padding: 10px 0;
+}
+
+.info-txt-about,
+.info-txt-web {
+    padding-top: 5px;
+    text-indent: 20px;
+    text-align: justify;
+}
+
+.artisan-info-title {
+    margin-right: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.artisan-website-link {
+    color: #0074c7;
+}
+
+@media screen and (min-width:720px) {
+
+    .artisan-container {
+        padding: 30px 0;
+    }
+
+    .artisan-info {
+        margin-bottom: 30px;
+    }
+
+    .artisan-info-web {
+        display: flex;
+        align-items: center;
+    }
+
+    .artisan-info-title {
+        margin-right: 20px;
+        font-size: 1.3rem;
+    }
+
+    .info-txt-about {
+        text-indent: 30px;
+    }
+
+    .info-txt-web {
+        text-indent: 0;
+        padding-top: 0;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .artisan-container {
+        padding: 40px 0;
+    }
+
+    .artisan-info {
+        margin-bottom: 40px;
+    }
+
+    .artisan-info-title {
+        font-size: 1.6rem;
+    }
+
+    .info-txt-about {
+        text-indent: 50px;
+    }
+
+}
