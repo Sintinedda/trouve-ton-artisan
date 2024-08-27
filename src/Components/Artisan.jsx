@@ -19,7 +19,7 @@ function Artisan() {
                     <div className="artisan-info">
                         <div className="artisan-info-item">
                             <p className="artisan-info-title">Note : </p>
-                            <p className="artisan-info-txt"><Rating className="top-stars" initialValue={artisan.note} readonly allowFraction size={20} fillColor="#0074c7" emptyColor="#9acbee"/></p>
+                            <p className="artisan-info-txt"><Rating className="top-stars" initialValue={artisan.note} readonly allowFraction size={25} fillColor="#0074c7" emptyColor="#9acbee"/></p>
                         </div>
                         <div className="artisan-info-item">
                             <p className="artisan-info-title">Spécialité : </p>
