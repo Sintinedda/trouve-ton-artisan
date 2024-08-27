@@ -14,12 +14,34 @@ function Header() {
     let menuRef = useRef();
 
     const newData = [...new Set(data.map(item => (item.category)))];
+    
+    const [input, setInput] = useState('');
+        let inputHandler = (e) => {
+        var lowerCase = e.target.value.toLocaleLowerCase();
+        setInput(lowerCase);
+    }
 
+    const filteredData = data.filter((artisan) => {
+        if (input === "") {
+            return false;
+        } else {
+            return artisan.name.toLocaleLowerCase().includes(input) 
+            || artisan.specialty.toLocaleLowerCase().includes(input) 
+            || artisan.location.toLocaleLowerCase().includes(input);
+        }
+    })
+
+    const toggle = () => {
+        setShowSearch(false);
+        setShowLinks(false);
+        setInput('');
+    }
+    
     useEffect(() => {
 
         let closeSearch = (e) => {
             if (!searchRef.current.contains(e.target)){
-                setShowSearch(false);
+                setShowSearch(false) || setInput('');
             }
         };
         
@@ -38,6 +60,7 @@ function Header() {
 
         document.addEventListener("mousedown", closeSearch);
         document.addEventListener("mousedown", closeMenu);
+        
 
         return() => {
             document.removeEventListener("mousedown", closeSearch);
@@ -61,8 +84,15 @@ function Header() {
                             </button>
                         </div>
                         <div className={`nav-search ${showSearch ? "show-search" : "hide-search"}`}>
-                            <input type="text" className="nav-search-input" placeholder="Rechercher" />
-                            <i className="material-symbols-outlined nav-logo-search">search</i>
+                            <div className="nav-searchbar">
+                                <input type="text" className="nav-search-input" placeholder="Rechercher" onChange={inputHandler} value={input}/>
+                                <i className="material-symbols-outlined nav-logo-search">search</i>
+                            </div>
+                            <ul className="nav-search-items">
+                                {filteredData.map((artisan) => (
+                                    <li className="nav-search-item" key={artisan.id}><NavLink to={`/artisan/:${artisan.id}`} onClick={toggle} className="nav-search-link">{artisan.name}, {artisan.specialty} à {artisan.location}</NavLink></li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                     <div className="nav-menu-container" ref={menuRef}>
@@ -75,7 +105,7 @@ function Header() {
                             <ul className="nav-menu-items">
                                 {newData.map((cat, index) => {
                                     return(
-                                        <li className="nav-menu-item" key={index}><NavLink to={`/category/:${cat}`} className="nav-menu-link">{cat}</NavLink></li>
+                                        <li className="nav-menu-item" key={index}><NavLink to={`/category/:${cat}`} className="nav-menu-link" onClick={toggle}>{cat}</NavLink></li>
                                     )
                                     })}
                             </ul>
