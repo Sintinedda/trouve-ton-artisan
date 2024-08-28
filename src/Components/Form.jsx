@@ -31,7 +31,7 @@ function Form() {
         <form className="contact-form" method="POST" onSubmit={handleSubmit}>
             <div className="form-inputs">
                 <label htmlFor="name" className="form-label">Nom : </label>
-                <input id="name" type="text" className="form-input" value={formData.username} onChange={handleChange} />
+                <input id="name" type="text" className="form-input" value={formData.username} onChange={handleChange}  required/>
             </div>
             <div className="form-inputs">
                 <label htmlFor="object" className="form-label">Objet : </label>
