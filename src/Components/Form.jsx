@@ -31,15 +31,15 @@ function Form() {
         <form className="contact-form" method="POST" onSubmit={handleSubmit}>
             <div className="form-inputs">
                 <label htmlFor="name" className="form-label">Nom : </label>
-                <input type="text" className="form-input" value={formData.username} onChange={handleChange} required />
+                <input id="name" type="text" className="form-input" value={formData.username} onChange={handleChange}  required/>
             </div>
             <div className="form-inputs">
                 <label htmlFor="object" className="form-label">Objet : </label>
-                <input type="text" className="form-input" value={formData.object} onChange={handleChange} required />
+                <input id="object" type="text" className="form-input" value={formData.object} onChange={handleChange} required />
             </div>
             <div className="form-textarea-container">
                 <label htmlFor="message" className="form-label">Message : </label>
-                <textarea  className="form-textarea" value={formData.message} onChange={handleChange} required ></textarea>
+                <textarea id="message"  className="form-textarea" value={formData.message} onChange={handleChange} required ></textarea>
             </div>
             <div className="form-submit">
                 <button className="form-submit-btn" type="submit">Envoyer</button>
