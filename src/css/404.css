@@ -17,23 +17,30 @@
     font-size: 1.3rem;
 }
 
-.page404-btn-container {
-    text-align: center;
+.page404-backhome-container {
     padding-top: 10px;
 }
 
-.page404-btn {
-    padding: 10px 20px;
+.page404-backhome {
+    width: max-content;
     border-radius: 5px;
     background-color: #f1f8fc;
-    color: #0074c7;
+    margin: auto;
     cursor: pointer;
     font-weight: 600;
     border: 2px solid #82b864;
     font-size: 1.3rem;
 }
 
-.page404-btn:hover {
+.page404-backhome:hover {
     background-color: #82b864;
     font-size: 1.4rem;
+}
+
+.page404-backhome-txt {
+    padding: 10px 20px;
+}
+
+.page404-backhome-txt:hover {
+    color: #f1f8fc;
 }

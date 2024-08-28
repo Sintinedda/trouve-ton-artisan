@@ -74,7 +74,7 @@ function Header() {
         <header>
             <nav className="nav">
                 <div className="header-logo-div">
-                    <Link to="/"><img className="header-logo" src={Logo} alt="Trouve ton artisan avec la région Auvergne-Rhône-Alpes" /></Link>
+                    <Link to="/home"><img className="header-logo" src={Logo} alt="Trouve ton artisan avec la région Auvergne-Rhône-Alpes" /></Link>
                 </div>
                 <div className="nav-items">
                     <div className="nav-search-container" ref={searchRef}>
@@ -85,7 +85,7 @@ function Header() {
                         </div>
                         <div className={`nav-search ${showSearch ? "show-search" : "hide-search"}`}>
                             <div className="nav-searchbar">
-                                <input type="text" className="nav-search-input" placeholder="Rechercher" onChange={inputHandler} value={input}/>
+                                <input id="searchbar" type="text" className="nav-search-input" placeholder="Rechercher" onChange={inputHandler} value={input}/>
                                 <i className="material-symbols-outlined nav-logo-search">search</i>
                             </div>
                             <ul className="nav-search-items">
