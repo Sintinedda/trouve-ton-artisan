@@ -1,8 +1,9 @@
 import React from "react";
-import "../css/home.css";
-import data from "../json/datas.json";
 import { Rating } from "react-simple-star-rating";
 import { Link } from "react-router-dom";
+
+import "../assets/css/home.css";
+import data from "../assets/json/datas.json";
 
 
 function Home() {

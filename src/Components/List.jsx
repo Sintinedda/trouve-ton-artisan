@@ -1,8 +1,9 @@
 import React from "react";
-import data from "../json/datas.json";
 import {  useParams, Link } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
-import "../css/list.css";
+
+import data from "../assets/json/datas.json";
+import "../assets/css/list.css";
 
 function List() {
 

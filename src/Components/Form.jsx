@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import data from "../json/datas.json";
-import "../css/form.css"
+
+import data from "../assets/json/datas.json";
+import "../assets/css/form.css"
 
 
 function Form() {

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../css/footer.css";
-import data from "../json/datas.json";
+
+import "../assets/css/footer.css";
+import data from "../assets/json/datas.json";
 
 function Footer() {
 
