@@ -1,8 +1,10 @@
 import React from "react";
-import "../css/artisan.css";
 import { Link, useParams } from "react-router-dom";
-import data from "../json/datas.json";
 import { Rating } from "react-simple-star-rating";
+
+import data from "../assets/json/datas.json";
+import "../assets/css/artisan.css";
+
 import Form from "./Form";
 
 function Artisan() {

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+
 import './App.css';
-import "./css/artisan-card.css";
+import "./assets/css/artisan-card.css";
 
 import Header from './Components/Header';
 import Home from './Components/Home';
